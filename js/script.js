@@ -8,7 +8,7 @@
 
 
     const calculateResult = (amountElement, currencyElement) => {
-        const eur = 4.62;
+        const eur = 4.54;
         const usd = 4.08;
         const gbp = 5.46;
 
