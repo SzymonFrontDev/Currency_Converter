@@ -1,11 +1,10 @@
 {
     let buttonClear = document.querySelector(".js-button");
     let resultElement = document.querySelector(".js-result");
-
-    buttonClear.addEventListener("click", () =>
-        resultElement.innerText = "0.00"
-    );
-
+    const formElement = document.querySelector(".js-form");
+const Cleaner = () =>{ 
+     resultElement.innerText = "0.00"
+    };
 
     const calculateResult = (amountElement, currencyElement) => {
         const eur = 4.54;
@@ -24,12 +23,8 @@
         }
     };
 
-    const formElement = document.querySelector(".js-form");
-
     const updateResultText = (amount, result, currency) => {
-
         resultElement.innerText = `${result.toFixed(2)}`
-
     }
 
     const onFormSybmit = (event) => {
@@ -38,7 +33,6 @@
         const amountElement = document.querySelector(".js-amount");
         const currencyElement = document.querySelector(".js-currency");
 
-
         const amount = amountElement.value;
         const currency = currencyElement.value;
         const result = calculateResult(amountElement, currencyElement)
@@ -46,11 +40,9 @@
         updateResultText(amount, result, currency);
     }
 
-
     const init = () => {
-
         formElement.addEventListener("submit", onFormSybmit)
-
+        buttonClear.addEventListener("click",Cleaner)
     };
 
     init();
